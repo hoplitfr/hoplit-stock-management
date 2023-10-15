@@ -203,6 +203,9 @@ function hoplit_stock_management_edit_item_page() {
                     ),
                     array('id' => $item_id)
                 );
+                
+                // Retrieve the new value of the edited item
+                $item = $wpdb->get_row("SELECT * FROM $table_name WHERE id = $item_id", ARRAY_A);
 
                 echo '<div class="notice notice-success"><p>Item updated successfully!</p></div>';
 				echo '<a href="' . admin_url('admin.php?page=hoplit_stock_management') . '" class="button">Back to Main Page</a></div>';
