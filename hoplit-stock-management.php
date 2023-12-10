@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Hoplit Stock Management
  * Description: A simple stock display solution for your WordPress website.
- * Version: 1.0.0
+ * Version: 1.0
  * Author: Hoplit.fr
  * Author URI: https://www.hoplit.fr/
  * License: GPL v3
@@ -258,9 +258,9 @@ function hoplit_stock_management_delete_item_page() {
 
         if ($item) {
             echo '<p>Are you sure you want to delete the following item?</p>';
-            echo '<p>Name: ' . $item['name'] . '</p>';
-            echo '<p>Quantity: ' . $item['quantity'] . '</p>';
-            echo '<p>Price: ' . $item['price'] . '</p>';
+            echo '<p>Name: ' . esc_attr($item['name']) . '</p>';
+            echo '<p>Quantity: ' . esc_attr($item['quantity']) . '</p>';
+            echo '<p>Price: ' . esc_attr($item['price']) . '</p>';
             echo '<form method="post">';
             echo '<input type="hidden" name="delete_item" value="1">';
             echo '<input type="submit" class="button button-primary" value="Delete">';
@@ -291,10 +291,10 @@ function hoplit_stock_management_display_table() {
     $content .= '<tbody>';
     foreach ($stocks as $stock) {
         $content .= '<tr>';
-        $content .= '<td>' . $stock['date'] . '</td>';
-        $content .= '<td>' . $stock['name'] . '</td>';
-        $content .= '<td>' . $stock['quantity'] . '</td>';
-        $content .= '<td>' . $stock['price'] . '</td>';
+        $content .= '<td>' . esc_attr($stock['date']) . '</td>';
+        $content .= '<td>' . esc_attr($stock['name']) . '</td>';
+        $content .= '<td>' . esc_attr($stock['quantity']) . '</td>';
+        $content .= '<td>' . esc_attr($stock['price']) . '</td>';
         $content .= '</tr>';
     }
     $content .= '</tbody>';

@@ -1,7 +1,7 @@
 === Hoplit Stock Management ===
 Contributors: hoplitfr
 Tags: stock, management, product
-Tested up to: 6.3
+Tested up to: 6.4.2
 Stable tag: 1.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
